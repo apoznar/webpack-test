@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "WTF Webpack starterkit",
   "main": "index.js",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --mode development",
     "build": "webpack --config webpack.prod.js --mode production",
