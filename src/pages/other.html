@@ -12,17 +12,27 @@
         🍔
       </button>
       <nav class="navigation navigation--js">
-        <a class="navigation__link navigation__link--homepage" href="index.html"
+        <a
+          class="navigation__link navigation__link--homepage"
+          href="../pages/index.html"
           >Strona główna</a
         >
-        <a class="navigation__link navigation__link--html" href="html.html"
+        <a
+          class="navigation__link navigation__link--html"
+          href="../pages/html.html"
           >HTML</a
         >
-        <a class="navigation__link navigation__link--css" href="css.html"
+        <a
+          class="navigation__link navigation__link--css"
+          href="../pages/css.html"
           >CSS</a
         >
-        <a class="navigation__link navigation__link--js" href="js.html">JS</a>
-        <a class="navigation__link navigation__link--other" href="other.html"
+        <a class="navigation__link navigation__link--js" href="../pages/js.html"
+          >JS</a
+        >
+        <a
+          class="navigation__link navigation__link--other"
+          href="../pages/other.html"
           >Inne notatki</a
         >
       </nav>
@@ -81,7 +91,10 @@
             Możemy też uwidocznić stronę na GitHub Pages poprzez ustawienia
             repozytorium, zmieniamy source na branch i używamy linka powyżej.
             Jest też plik .gitignore który zawiera dane o plikach które GIT ma
-            ignorować.
+            ignorować. Branch master. git branch nazwa tworzy brancha. Git
+            checkout nazwa_brancha przechodzi na innego brancha. Git push
+            --set-upstream origin nazwabrancha tworzy brancha na gicie. Git
+            merge nazwabrancha łączy branche. Git pull jak edytujemy na gicie i ściągamy na dysk.
           </p>
           <h3 class="tertiary__heading--other">Hamburger Menu</h3>
           <p>
@@ -99,13 +112,19 @@
             navigation--open. Jest też atrybut do button aria-label do
             opisywania przycisku.
           </p>
+          <h3 class="tertiary__heading--other">Markdown</h3>
+          <p>
+            Uniwersalne formatowanie tekstu. Nagłówki # ## ###.
+          </p>
         </article>
       </section>
       <footer class="footer">
         Są to podstawy frontend stworzone przy pomocy kursu WTF Macieja Korsana.
+        Linki [WIDOK](link). ![Alt obrazka](ścieżka). `wyróżnienie`.
+        ```javascript długi kod```. *kursywa*. > cytat. - lista. 1. numerowana.
+        Readme.md na repo.
         <a class="footer__link" href="#top">Wróć na górę strony.</a>
       </footer>
-      <script src="main.js"></script>
     </main>
   </body>
 </html>

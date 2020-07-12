@@ -12,17 +12,27 @@
         🍔
       </button>
       <nav class="navigation navigation--js">
-        <a class="navigation__link navigation__link--homepage" href="index.html"
+        <a
+          class="navigation__link navigation__link--homepage"
+          href="../pages/index.html"
           >Strona główna</a
         >
-        <a class="navigation__link navigation__link--html" href="html.html"
+        <a
+          class="navigation__link navigation__link--html"
+          href="../pages/html.html"
           >HTML</a
         >
-        <a class="navigation__link navigation__link--css" href="css.html"
+        <a
+          class="navigation__link navigation__link--css"
+          href="../pages/css.html"
           >CSS</a
         >
-        <a class="navigation__link navigation__link--js" href="js.html">JS</a>
-        <a class="navigation__link navigation__link--other" href="other.html"
+        <a class="navigation__link navigation__link--js" href="../pages/js.html"
+          >JS</a
+        >
+        <a
+          class="navigation__link navigation__link--other"
+          href="../pages/other.html"
           >Inne notatki</a
         >
       </nav>
@@ -176,7 +186,11 @@
             innym elemencie color: var(--small-padding). Możemy też dodawać
             zmienne przez JS -
             document.documentELement.style.setProperty('--text-color',
-            'violet').
+            'violet'). Prefixy potrzebne są dla różnych przeglądarek, warto użyć
+            caniuse do sprawdzenia albo lepiej - autoprefixer. Fonty od google -
+            fonts.google.com; Latin extended! zażółć gęsią jaźń; dorzucamy do
+            importu cssowego. Wywołujemy go poprzed font-family i font-weight.
+            Reguła @font-face też istnieje ale nie używa się jej.
           </p>
           <h3 class="tertiary__heading--css">CSS - przydatne linki</h3>
           <p>
@@ -200,7 +214,6 @@
         Są to podstawy frontend stworzone przy pomocy kursu WTF Macieja Korsana.
         <a class="footer__link" href="#top">Wróć na górę strony.</a>
       </footer>
-      <script src="main.js"></script>
     </main>
   </body>
 </html>
