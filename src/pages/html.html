@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header class="header__homepage">
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link navigation__link--html" href="html.html"
+          >HTML</a
+        >
+        <a class="navigation__link navigation__link--css" href="css.html"
+          >CSS</a
+        >
+        <a class="navigation__link navigation__link--js" href="js.html">JS</a>
+        <a class="navigation__link navigation__link--other" href="other.html"
+          >Inne notatki</a
+        >
+      </nav>
+    </header>
+
+    <main class="main">
+      <header class="main__header" id="top">
+        <h1 class="primary__heading--html">
+          Moje notatki z uczestnictwa w 14-tygodniowym kursie "Co Ten Frontend"
+          prowadzonym przez Macieja Korsana.
+        </h1>
+      </header>
+      <img class="picture__html" src="../assets/img/html.png" alt="Logo HTML" />
+
+      <section>
+        <h2 class="secondary__heading--html">HTML</h2>
+        <h3 class="tertiary__heading--html">HTML - lekcja I</h3>
+        <p>
+          Dokument HTML dzielimy na części head i body. W części body możemy
+          wyróżnić części main, section, article, header, footer. Możemy
+          stworzyć także nagłówki h1-h6 oraz paragrafy - p.
+        </p>
+        <h3 class="tertiary__heading--html">HTML - lekcja II</h3>
+        <p>
+          Samozamykający znacznik br/ rozpoczyna nową linię.<br />
+          Znacznik <b>b</b> pogrubia, a <i>i</i> tworzy kursywę. Znaczniki
+          <strong>strong</strong> i <em>em</em> działają odpowiednio podobnie,
+          ale mają za to znaczenie semantyczne. Inny znacznik 'a' może zawierać
+          linki/łącza wewnątrz dokumentu, ma atrybuty href="" i target="". W
+          href podajemy adres, do którego prowadzi klikniecie w znacznik.
+          Atrybut w elemencie id="moj-identyfikator" identyfikuje element,
+          wprowadzenie go do znacznika a jeżeli zapiszemy go w
+          href="#moj-identyfikator" po kliknięciu przenosi do oznaczonego
+          miejsca w obrębie strony . Znacznik nav tworzy nawigację strony - w
+          części body tworzymy header z nav (zaraz nad mainem aby przenosić się
+          do różnych stron powiązanych linkiem. Inny znacznik - img z atrybutami
+          src i alt pozwala nam na dołączenie dowolnego obrazka z podanego
+          źródła i tekstem alternatywnym.
+        </p>
+        <h3 class="tertiary__heading--html">Życie w pudełku</h3>
+        <p>
+          Do opakowania treści używamy znacznika div z klasą box. Elementy
+          pudełka od zewnątrz: margin (margines), border (obramowanie), padding
+          (wewnętrzny margines) oraz element.
+        </p>
+        <h3 class="tertiary__heading--html">HTML - lekcja III</h3>
+        <p>
+          Lista nieuporządkowana - ul, listowanie przez li. Uprządkowana - ol.
+          list-style(-type) to styl listy. Dl - description list. Dt -
+          description term. DD - description details. Table - tabela, w niej
+          wiersze tr i kolumny td. Nagłówek tabeli thead, komórka w nagłówku th.
+          Ciało tabeli - tbody. Caption - opis tabeli.
+        </p>
+        <h3 class="tertiary__heading--html">Formularze</h3>
+        <p>
+          Znacznik form i elementy input (w znaczniku p) - ten może mieć atrybut
+          name, id. Znacznik label tworzy opis pola, atrybut for u niego
+          powinien odnosić się do id form aby był połączony. Label może też
+          okalać form - jako drugi sposób. Element input może mieć type=text,
+          value (domyślna wartość), placeholder (tekst podpowiedzi, nie
+          zastępuje atrybutu label). Możemy nadać im klasy i zrobić elementom
+          display block i width 100%. Znacznik fieldset to grupa pól a legend to
+          opis tej grupy. Typ radio z inputa występuje z name, trzeba opakować w
+          labelu z nazwą. Typ checkbox, może mieć wartość checked oraz
+          type(number, tel, email, password, file), range (obok min, max i step;
+          możemy przez DOM sprawdzić wartość). Element select tworzy listę do
+          wyboru z elementami option (mogą być z value). Znacznik textarea służy
+          do publikowania większych treści. Input type submit wysyła formularz.
+          Aby wysyłać formularze dodajemy do form atrybut action z url gdzie go
+          wysyłamy. Żądanie typu GET dopisuje zebrane dane do adresu (bierze
+          atrybut value)- jest domyślne. Metoda POST wysyła wartości w formie
+          form data bez uwidocznienia w adresie. Mamy jeszcze wartość enctype i
+          ona mówi czy to jest zwykły formularz czy coś jeszcze jest na tej
+          stronie (np. pliki). Poprzez stronę dev.cotenfrontend.pl można
+          sprawdzić uwidocznienie danych obiema metodami. Atrybut required
+          wymaga podania danych. Atrybut pattern pozwala na używanie wyrażeń
+          regularnych.
+        </p>
+        <h3 class="tertiary__heading--html">HTML - przydatne linki</h3>
+        <p>
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes"
+            >Spis globalnych atrybutów HTML</a
+          ><br />
+          <a href="https://www.w3.org/TR/html52/">Oficjalna dokumntacja HTML</a
+          ><br />
+          <a href="https://validator.w3.org/nu/#textarea"
+            >Strona do sprawdzenia poprawności kodu HTML</a
+          ><br />
+          <a href="http://html5pattern.com/names"
+            >Strona do sprawdzenia wyrażeń regularnych</a
+          >
+        </p>
+      </section>
+
+      <footer class="footer">
+        Są to podstawy frontend stworzone przy pomocy kursu WTF Macieja Korsana.
+        <a class="footer__link" href="#top">Wróć na górę strony.</a>
+      </footer>
+      <script src="main.js"></script>
+    </main>
+  </body>
+</html>

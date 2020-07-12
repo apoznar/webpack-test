@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header class="header__homepage">
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link navigation__link--html" href="html.html"
+          >HTML</a
+        >
+        <a class="navigation__link navigation__link--css" href="css.html"
+          >CSS</a
+        >
+        <a class="navigation__link navigation__link--js" href="js.html">JS</a>
+        <a class="navigation__link navigation__link--other" href="other.html"
+          >Inne notatki</a
+        >
+      </nav>
+    </header>
+    <main class="main">
+      <header class="main__header" id="top">
+        <h1 class="primary__heading--js">
+          Moje notatki z uczestnictwa w 14-tygodniowym kursie "Co Ten Frontend"
+          prowadzonym przez Macieja Korsana.
+        </h1>
+      </header>
+      <img class="picture__js" src="../assets/img/js.png" alt="Logo JS" />
+      <section>
+        <h2 class="secondary__heading--js">Javascript ES6+</h2>
+        <article>
+          <h3 class="tertiary__heading--js">JS ES6+ - lekcja I</h3>
+          <p>
+            Kod Javascript przechowujemy w pliku main.js i odniesienie do niego
+            wpisujemy poprzez znacznik script src="" na samym dole przed
+            zamknięciem body. Jedna z podstawowych funkcji to alert('siema!'); -
+            otwierające okno z wiadomością i console.log('siema!') - drukujące
+            wiadomość w konsoli. Zmienne tworzymy formułą const a = 'Adam';
+            Backtick ` używany np w funkcji console.log('Zmienna ${a}'), gdzie
+            podstawia się wcześniej stworzona zmienna.
+          </p>
+          <h3 class="tertiary__heading--js">JS ES6+ - lekcja II</h3>
+          <p>
+            Zmienne let (definiowanie kilka razy jest możliwe), const
+            (niezmienialna) i var (już nieużywany). Typy proste - String (''),
+            number, bigint, boolean, null, undefined, *symbol. wyrażenie typeof
+            sprawdza typ. Nie możemy zmieniać wartości, zmieniamy połączenia
+            między nimi a zmiennymi (niemutowalność).
+          </p>
+          <h3 class="tertiary__heading--js">DOM</h3>
+          <p>
+            Document Object Model - model dokumentu obecny na stronie. Musimy
+            wpisać kod w JS document.querySelector('.selector') wykorzystując
+            selektor CSS. Wydruk w konsoli pokazuje dokładnie ten element (można
+            podać pod zmienną). Inna komenda -
+            nazwaZmiennejQuerySelector.innerHTML = 'treść' pozwala na
+            modyfikację elementu i nadpisanie go (to nie jest typ prosty).
+          </p>
+          <h3 class="tertiary__heading--js">JS ES6+ - lekcja III i IV</h3>
+          <p>
+            Pisanie funkcji. Funkcje Fat Arrow. Obiekty w JavaScript oraz ich
+            immutability. Pętle if-else, else if oraz operatory porównań.
+            Konstrukcja switch. Eventy możemy stworzyć np w oparciu o element
+            button w HTML - do interakcji na stronie. Schemat -
+            element.addEventListener(type, listener [, options]). Najpierw
+            ściągamy do zmiennej document.querySelector('klasa'); Typ to może
+            być np. click, mouseenter, mouseover. Listener to funkcja np.
+            strzałkowa click drukująca log albo zmianę treści (bez wywoływania,
+            sama nazwa). Możemy także bezpośrednio w event listenerze zrobić
+            funkcję strzałkową z e który odwołuje się do innych atrybutów
+            eventowych.
+          </p>
+          <h3 class="tertiary__heading--js">Node.js</h3>
+          <p>
+            Node to JS uruchamiany poza przeglądarką. Nie ma dostępu do DOM.
+            Uruchamiamny go przez wiersz poleceń z komendą node. Linki -
+            https://nodejs.org, https://yarnpkg.com/en/, https://www.npmjs.com/.
+            NPM to nie node package manager chociaż nim jest - to repozytorium z
+            paczkami do node. POlecenie npm init inicjalizuje projekt. Podanie
+            nazwy projektu i wpisanie danych generuje plik json. Npm install
+            --save normalize.css instaluje nam wybrany pakiet. Po instalacji
+            powstaje update json o dependencies i powstaje package-lock który
+            trzyma wersje instalowanych paczek. Powstaje też folder node_modules
+            z zainstalowanymi modułami. Do instalowania paczek deweloperskich
+            używamy --save-dev. Nie commitujemy node_modules. Yarn jest
+            alternatywą dla NPM. Komenda npx cowsay SIEMA SIEMA ukazuje nam
+            tekst w odpowiedniej formie bez instalacji pakietu. Skrypty NPM
+            możemy sobie zdefiniować w package.json. Wpisujemy je w "scripts" i
+            potem np. komendę start uruchamiamy poprzez npm run start.
+          </p>
+          <h3 class="tertiary__heading--js">Importowanie modułów</h3>
+          <p>
+            Istnieją moduły z CommonJS i ES6, ale korzystamy głównie z tych
+            drugich. Musimy do odnośnika do script.js dodać type="module".
+            Eksportowane funkcje poprzedzamy słowem kluczowym export, a w pliku
+            do którego importujemy słowem import {eksportowana_funkcja} from
+            './sciezka.js'. Jest też opcja export default nazwa (przy imporcie
+            nie podajemy nawiasów {}). Można zrobić też import moduł as
+            krótsza_nazwa. Import * as newName importuje wszystko z podanej
+            ścieżki. Robimy w wierszu npm init -y, potem npm install moment.
+          </p>
+          <h3 class="tertiary__heading--js">Webpack</h3>
+          <p>
+            Link do webpacka - https://webpack.js.org/. Plik wejściowy to
+            domyślnie ./src/index.js (trzeba go zrobić). Wyjściowy
+            ./dist/main.js. Istnieje też loader który pozwala na odczytywanie
+            plików innych niż JS. Istnieją też pluginy. Mode development i
+            production. WTF Webpack Starter Kit ma serwer lokalny z
+            autoodświeżaniem, wsparcie dla scss i sourcemap, minifikację, babel
+            i publikację na github pages. Po sklonowaniu npm install a potem npm
+            run start tworzy nam serwer. Trzeba stworzyć informacje o nowym
+            pliku w commonie i restartować serwer. W main.scss import ze znakiem
+            tyldy ściągnie nam zewnętrzne paczki. Npm run build. Dist jest
+            wynikiem naszej pracy, jego zawartość publikujemy na serwerze - nie
+            edytujemy go manualnie. Po pushowaniu zmian na gicie npm run publish
+            przesuwa zmiany na inny branch.
+          </p>
+        </article>
+      </section>
+      <footer class="footer">
+        Są to podstawy frontend stworzone przy pomocy kursu WTF Macieja Korsana.
+        <a class="footer__link" href="#top">Wróć na górę strony.</a>
+      </footer>
+      <script src="main.js"></script>
+    </main>
+  </body>
+</html>

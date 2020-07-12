@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header class="header__homepage">
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link navigation__link--html" href="html.html"
+          >HTML</a
+        >
+        <a class="navigation__link navigation__link--css" href="css.html"
+          >CSS</a
+        >
+        <a class="navigation__link navigation__link--js" href="js.html">JS</a>
+        <a class="navigation__link navigation__link--other" href="other.html"
+          >Inne notatki</a
+        >
+      </nav>
+    </header>
+    <main class="main">
+      <header class="main__header" id="top">
+        <h1 class="primary__heading--css">
+          Moje notatki z uczestnictwa w 14-tygodniowym kursie "Co Ten Frontend"
+          prowadzonym przez Macieja Korsana.
+        </h1>
+      </header>
+      <img class="picture__css" src="../assets/img/css.png" alt="Logo CSS" />
+      <section>
+        <h2 class="secondary__heading--css">CSS</h2>
+        <article>
+          <h3 class="tertiary__heading--css">CSS - lekcja I</h3>
+          <p>
+            Konstrukcja reguł CSS wygląda w następujący sposób: selektor {
+            właściwość: wartość; }. Możemy stworzyć w dokumencie HTML na końcu
+            head tag "style", ale lepszą praktyką jest wstawić w to miejsce
+            link: 'href="style.css" rel="stylesheet" type="text/css"'.
+            Właściwości background i color dają możliwość wyboru koloru. Kolor
+            może mieć swoją nazwę, bądź być zapisany w formacie #dddddd.
+          </p>
+          <h3 class="tertiary__heading--css">CSS - lekcja II</h3>
+          <p>
+            Możemy dodać atrybut style do znacznika, tzw. styl inline.
+            Stylowanie jest też możliwe po #id (jako atrybut w znaczniku, tzw.
+            selektor id, tworzymy jedno na stronie), .class (również atrybut w
+            znaczniku; tzw. selektor klasy) i po elemencie. Możemy dodać ścieżkę
+            np. 'nav a' będzie stylować linki w nav bez samego nav. Nie używamy
+            !important po właściwości bo nadpisuje wszystkie zdefiniowane
+            właściwości. Kolejność rozpatrywania stylów od najważniejszego:
+            important, style, id, class, element. Stylowanie bliżej elementu w
+            pliku (bądź w niższej linii) ma pierwszeństwo. Warto dodawać klasy
+            do wszystkich elementów, ale tylko jedną do każdego rodzaju.
+          </p>
+          <h3 class="tertiary__heading--css">Życie w pudełku</h3>
+          <p>
+            Właściwość display: block sprawi, że kontener div będzie widoczny w
+            bloku (elementy będą pod sobą), a inline sprawia że ustawiają się
+            obok siebie. Display: inline-block pozwala dodać właściwości width i
+            height. Możemy je zdefiniować poprzez liczbę pikseli. Właściwość
+            max-width i max-height zmienia się wraz z responsywnością, podobnie
+            min-width i min-height. Overflow: hidden ukrywa nam treść wystającą
+            poza element, auto dokłada scrolla w tym przypadku. Jednostki do
+            tworzenia stylów: 0, piksele (px), %, viewport width (vw) - % z
+            szerokości okna a nie rodzica, viewport height (vh). Możemy określić
+            też padding, padding-top, right, bottom, left (kolejność wpisywania
+            rozmiaru w padding). Wartości lustrzane (możemy podać tylko 2
+            wartości). Podobnie ustawiamy border, style (solid, dashed, dotted),
+            również border-color i taka jest kolejność przy samym border.
+            Border-radius zaokrągla border. Podobnie działa margin, właściwość
+            auto wyśrodkowuje się automatycznie - musi być podana szerokość.
+            Box-sizing odpowiada za cały content box - właściwość border-box.
+            Właściwość position ma własności static, relative, absolute, fixed
+            (jest cały czas w tym samym miejscu przy scrollowaniu), sticky
+            (rodzic nie może mieć overflowa, scrolluje się dopiero po
+            przesunięciu ekranu). Właściwości top, right, bottom, left pomagają
+            umiejscowić element. Z-index dzięki wysokiej wartości umiejscawia
+            element nad innymi. Jest jeszcze float, ale nie buduj za pomocą
+            niego layoutu (treść opływa ten element, możemy użyć własności float
+            z kierunkiem, clear: both).
+          </p>
+          <h3 class="tertiary__heading--css">BEM - Block element modifier</h3>
+          <p>
+            Sposób nazewnictwa ułatwiający pracę np. div z klasą hand ma w sobie
+            div z klasami hand__finger i hand__finger--thumb jako oznaczenie
+            kciuka. W pliku CSS główna klasa najpierw, a potem jej dzieci.
+            Używamy pełnych nazw klas, bez skrótów.
+          </p>
+          <h3 class="tertiary__heading--css">Flex</h3>
+          <p>
+            Display: flex. Flex-direction:
+            row/column/row-reverse/column-reverse. Flex-wrap:
+            nowrap/wrap/wrap-reverse. Flex-flow. Justify-content. Align-content.
+            Align-items. Align-self. Order. Flex-grow. Flex-shrink. Flex-basis.
+          </p>
+          <h3 class="tertiary__heading--css">Background</h3>
+          <p>
+            Właściwości background-image, background-position,
+            background-repeat, -attachment, -origin, -clip, -color, -size.
+          </p>
+          <h3 class="tertiary__heading--css">Grid</h3>
+          <p>
+            Grid służy do budowania layoutu. Numeracja siatki zaczyna się od 1.
+            Display: grid. Grid-template-columns: wartości po spacji tworzy
+            kolumny o podanej szerokości. Rows działa podobnie. Jednostka fr -
+            jeżeli łacznie kolumny mają jakąś ich wartość to stanowią potem
+            odpowiedni ułamek całości. Mozna też użyć repeat(ilerazy,wartość).
+            Column-gap tworzy przerwy między komórkami grida, row-gap podobnie.
+            minmax(min, max) również jako szerokość kolumny.
+            Grid-template-areas: "element element" "x x" tworzy elementy w
+            gridzie. Grid-area: header wskazuje gdzie jest element. Column i
+            row-gap. Grid-row-start (również column i end) pozwala wyzaczyć
+            numeryczny początek wiersza wg. siatki, ale zamiast tego można
+            podawać nazwy (kwadratowe nawiasy między szerokościami w grid
+            template) i span liczba na rozciągnięcie kolumn. Jest też grid-area
+            który łączy powyższe. Grid uzupełnia, nie zastępuje flexboxa.
+          </p>
+          <div class="grid">
+            <p>Element Grida 1</p>
+            <p>Element Grida 2</p>
+            <p>Element Grida 3</p>
+          </div>
+          <h3 class="tertiary__heading--css">Responsywność</h3>
+          <p>
+            @media typ, media feature (color, aspect-ratio...) które można
+            łączyć przez and, not i przecinka. Jest traktowany jak osobny plik
+            css w środku np. z własnym body, definiowane po wszystkich
+            elementach na końcu pliku. Można np. ustawić różne zachowanie strony
+            na różnych rozdzielczościach, oddzielają je tzw. breakpointy.
+            Mobile-first to ustalenie strony na mobilne systemy a potem
+            dostosowanie na te z większym ekranem.
+          </p>
+          <h3 class="tertiary__heading--css">
+            Pseudoelementy i pseudoselektory
+          </h3>
+          <p>
+            Takie jak content: "", element::before treść element::after. Dokleja
+            treść z content przed lub po elemencie, możemy mu np dodać element
+            blokowy czy kolor. Pseudoklasa ':' - hover (po najechaniu myszką),
+            visited (linki które widzieliśmy) i focus (efekty przy najechaniu
+            tabulatrem), również first-child na pierwsze dziecko elementu,
+            analogicznie last-child. Również not(selektor) kiedy chcemy żeby coś
+            nie działało na wskazane klasy.
+          </p>
+          <h3 class="tertiary__heading--css">SASS/SCSS</h3>
+          <p>
+            SASS to preprocesor CSS. SCSS jest prostszy, zamienia .scss na .css.
+            Wprowadza zmienne z dolarem. Można dodać @mixin jako selektor i
+            potem wpisać w dowolnym miejscu @include nazwa_mixina. Możemy dodać
+            parametry jak w JS i zawrzeć je w środku a następnie wywoływać je w
+            dowolnych miejscach. @extend działa podobnie ale korzysta sie z
+            selektora np. .font-style i wyrzuca go na górę pliku - rzadko
+            korzystane. Parent selektor & - dodany w środku selektora np.
+            &__title {} zamyka nam w klamrach elementy będące dziećmi danego
+            elementu i upraszcza kod dopisując wszystko co jest nad nim. NPM po
+            instalacji pakietu sass może renderować plik scss do css za pomocą
+            npx node-sass main.scss main.css. Przy każdych zmianach trzeba
+            nadpisywać. Dodanie parametru -w będzie robiło to automatycznie przy
+            zmianach scss. Błąd w składni też się pojawia ctrl+c wychodzi. Warto
+            wstawić pod skrypt i uruchamiać przez npm run sass.
+          </p>
+          <h3 class="tertiary__heading--css">Inne wiadomości</h3>
+          <p>
+            Color: inherit pobiera atrybut z wyższego rzędu. Import i eksport w
+            modułach jest prostszy niż korzystanie z NPM. Korzystamy ze słowa
+            kluczowego @import "źródło" podając ścieżkę lub link. Pseudoselektor
+            ::root i w środku --small-padding: 5px (to jest zmienna). Potem w
+            innym elemencie color: var(--small-padding). Możemy też dodawać
+            zmienne przez JS -
+            document.documentELement.style.setProperty('--text-color',
+            'violet').
+          </p>
+          <h3 class="tertiary__heading--css">CSS - przydatne linki</h3>
+          <p>
+            <a href="https://www.w3.org/TR/CSS/">Oficjalna dokumntacja CSS</a
+            ><br />
+            <a href="https://coolors.co/">Generator dopasowywania kolorów</a>
+            <a href="https://caniuse.com/"
+              >Strona do sprawdzania kompatybilności z przeglądarkami</a
+            >
+            <a href="https://figma.com/">Strona do grupowego cięcia grafik</a>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+              >PSeudoklasy</a
+            >
+            <a href="https://sass-lang.com/documentation">SASS</a>
+            <a href="https://www.sassmeister.com">SASS Meister</a>
+          </p>
+        </article>
+      </section>
+      <footer class="footer">
+        Są to podstawy frontend stworzone przy pomocy kursu WTF Macieja Korsana.
+        <a class="footer__link" href="#top">Wróć na górę strony.</a>
+      </footer>
+      <script src="main.js"></script>
+    </main>
+  </body>
+</html>

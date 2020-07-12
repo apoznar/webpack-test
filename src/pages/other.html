@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inne notatki</title>
+    <link href="normalize.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <header class="header__homepage">
+      <button class="hamburger hamburger--js" aria-label="Otwórz menu">
+        🍔
+      </button>
+      <nav class="navigation navigation--js">
+        <a class="navigation__link navigation__link--homepage" href="index.html"
+          >Strona główna</a
+        >
+        <a class="navigation__link navigation__link--html" href="html.html"
+          >HTML</a
+        >
+        <a class="navigation__link navigation__link--css" href="css.html"
+          >CSS</a
+        >
+        <a class="navigation__link navigation__link--js" href="js.html">JS</a>
+        <a class="navigation__link navigation__link--other" href="other.html"
+          >Inne notatki</a
+        >
+      </nav>
+    </header>
+    <main class="main">
+      <header class="main__header" id="top">
+        <h1 class="primary__heading--other">
+          Moje notatki z uczestnictwa w 14-tygodniowym kursie "Co Ten Frontend"
+          prowadzonym przez Macieja Korsana.
+        </h1>
+      </header>
+      <img
+        class="picture__other"
+        src="../assets/img/frontend.png"
+        alt="Technologie frontend"
+      />
+      <section>
+        <h2 class="secondary__heading--other">
+          Wiedza związana z technologiami frontendowymi
+        </h2>
+        <article>
+          <h3 class="tertiary__heading--other">Różne ciekawostki</h3>
+          <p>
+            Kombinacja alt+shift+F automatycznie czyści kod w Visual Studio
+            Code. Wykrzyknik oraz tabulator automatycznie wypełnia sekcję head.
+            Metoda Kanban (Todo, Doing - jedna rzecz, Done) wykorzystywana jest
+            w Trello. Pamiętaj o sposobach zapisu - camelCase, kebab-case,
+            snake_case, PascalCase. Kody odpowiedzi serwera: 200 to normalny
+            odczyt strony, 30x to przekierowania, 404 to brak strony, 50x to
+            błąd wewnętrzny serwera. Musimy pamiętać o roocie(/) w ścieżce do
+            zasobu (jeżeli strona jest postawiona na zewnętrznym serwerze).
+          </p>
+          <p>
+            Terminal ma na Windowsie formę wiersza poleceń (cmd). Komenda dir
+            pokazuje spis plików w folderze, cd przechodzi do wskazanego pliku
+            (tab podpowiada nazwę pliku), mkdir nazwa tworzy folder, code .
+            uruchamia vsc. cd .. przenosi do folderu wyżej w strukturze.
+          </p>
+          <p>
+            Ciekawe rozszerzenia do VSC - Prettier (formater kodu) oraz Live
+            Server (podgląd dynamiczny strony, dzięki ip config możemy dostać ip
+            i podejrzeć plik z innej lokalizacji).
+          </p>
+          <h3 class="tertiary__heading--other">GIT & GitHub</h3>
+          <p>
+            System kontroli wersji. Komendy w bashu: git --version (sprawdza
+            wersję), git config --global user.name "Jan Nowak" (nadaje nazwę
+            użytkownika), git config --global user.email jannowak@example.com
+            (nadaje maila uzytkownika). Git config --get user.name sprawdza
+            poprawność. Git init inicjalizuje repozytorium. Git status pokazuje
+            status projektu. Git add . dodaje do śledzenia wszystkie pliki w
+            repozytorium. Git commit -m "initial commit" zatwierdza zmiany z
+            komentarzem - warto commitować często. Gitk pokazuje historię
+            commitów. Clear czyści terminal. Zainstalowane rozszerzenie Git
+            Lens. Na końcu piszemy git push aby przesunąć zmiany na GitHuba.
+            Możemy też uwidocznić stronę na GitHub Pages poprzez ustawienia
+            repozytorium, zmieniamy source na branch i używamy linka powyżej.
+            Jest też plik .gitignore który zawiera dane o plikach które GIT ma
+            ignorować.
+          </p>
+          <h3 class="tertiary__heading--other">Hamburger Menu</h3>
+          <p>
+            Potrzeba nawigacji, styl do nawigacji na mobile, na desktop,
+            przycisk do pokazywania/ukrywania (zmiana klasy), kod js do
+            podpięcia się pod przycisk i kod js do zmiany klasy. Nadawanie i
+            usuwanie klasy -
+            element.classList.add/remove/toggle/contains[wyrażenie
+            logiczne]('klasa-z-js').Rozpoczynając od początku mamy element nav,
+            potem np. zmieniamy atrybuty obrazka na max-width: 100% i display
+            blocki robimy inne działania dla responsywności mobilnej elementów.
+            Tworzymy przycisk ukrywany pod hamburgerem z prawej strony i na
+            końcu selektor klasy hamburger i event listener powiązany z
+            hamburgerem który uwidacznia nam nav oraz toggle na
+            navigation--open. Jest też atrybut do button aria-label do
+            opisywania przycisku.
+          </p>
+        </article>
+      </section>
+      <footer class="footer">
+        Są to podstawy frontend stworzone przy pomocy kursu WTF Macieja Korsana.
+        <a class="footer__link" href="#top">Wróć na górę strony.</a>
+      </footer>
+      <script src="main.js"></script>
+    </main>
+  </body>
+</html>
